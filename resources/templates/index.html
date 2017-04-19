@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage!</title>
+</head>
+<body>
+<h1>Welcome To Your Contacts. Yeaaaahh.</h1>
+
+<form action="/contacts" method="POST">
+    <input type="text" name="firstName" placeholder="First Name" />
+    <input type="text" name="lastName" placeholder="Last Name" />
+    <input type="text" name="phoneNumber" placeholder="Phone Number" />
+    <input type="text" name="address" placeholder="Address" />
+
+    <input type="submit" />
+</form>
+
+<ol>
+    {{#people}}
+    <li>
+        <dl>
+            <dt>First Name</dt>
+            <dd>{{firstName}}</dd>
+
+            <dt>Last Name</dt>
+            <dd>{{lastName}}</dd>
+
+            <dt>Phone Number</dt>
+            <dd>{{phoneNumber}}</dd>
+
+            <dt>Address</dt>
+            <dd>{{address}}</dd>
+        </dl>
+    </li>
+    {{/people}}
+</ol>
+</body>
+</html>
