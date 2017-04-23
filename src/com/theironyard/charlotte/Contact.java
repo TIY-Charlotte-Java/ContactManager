@@ -4,6 +4,7 @@ package com.theironyard.charlotte;
  * Created by Ben on 4/18/17.
  */
 public class Contact {
+    private int id;
     private String firstName;
     private String lastName;
     private String phoneNumber;
@@ -12,11 +13,20 @@ public class Contact {
     public Contact() {
     }
 
-    public Contact(String firstName, String lastName, String phoneNumber, String address) {
+    public Contact(int id, String firstName, String lastName, String phoneNumber, String address) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
         this.address = address;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getFirstName() {
